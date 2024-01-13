@@ -11,6 +11,7 @@ import { ArticleNewTemplateComponent } from './article-new-template/article-new-
 import { ArticleNewReactiveComponent } from './article-new-reactive/article-new-reactive.component';
 import { ArticleServiceService } from './services/article-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     ArticleListComponent,
     NavbarComponent,
     ArticleNewTemplateComponent,
-    ArticleNewReactiveComponent
+    ArticleNewReactiveComponent,
+    CurrencyFormatPipe
   ],
   imports: [
     BrowserModule,

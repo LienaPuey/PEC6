@@ -20,9 +20,9 @@ import { Observable, Subject, debounceTime, distinctUntilChanged, switchMap } fr
     </form>
 </div>
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
-        <div *ngFor="let article of articles$ | async" >
-          {{article.name}}
-        </div>
+          <ng-container *ngFor="let article of articles$ | async">
+            <app-article-item [article]="article" (changeQuantity)="onQuantityChange($event)"></app-article-item>
+          </ng-container>
       </div>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
         <div *ngFor="let article of articles | async" >

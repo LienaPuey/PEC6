@@ -9,7 +9,7 @@
               </svg>
             <div class="card-body" [ngClass]="{'on-sale': article.isOnSale, 'not-on-sale': !article.isOnSale}">
               <p class="card-text text-center fw-bold">{{article.name}}</p>
-              <p class="card-text text-center fw-bold" [ngClass]="{'price': !article.isOnSale}">{{article.price}}€</p>
+              <p class="card-text text-center fw-bold" [ngClass]="{'price': !article.isOnSale}">{{article.price | currencyFormat}}</p>
               <div class="d-flex justify-content-center align-items-center">
                 <div *ngIf="article.isOnSale">
                   <button type="button" class="btn btn-sm btn-primary" [ngClass]="{'disabled': article.quantityInCart === 0}" (click)="decrement()">-</button>
